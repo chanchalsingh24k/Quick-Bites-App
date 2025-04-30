@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 
 export interface FoodCategoryProps {
@@ -10,7 +9,7 @@ export interface FoodCategoryProps {
 const FoodCategory = ({ id, name, image }: FoodCategoryProps) => {
   return (
     <Link 
-      to={`/category/${id}`}
+      to={`/category/${id}/restaurants`}
       className="group block"
     >
       <div className="aspect-square overflow-hidden rounded-full border-2 border-gray-100 mb-2 transition-transform group-hover:scale-105">

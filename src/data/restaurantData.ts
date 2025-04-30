@@ -1,4 +1,3 @@
-
 import { RestaurantCardProps } from "@/components/RestaurantCard";
 
 export const restaurants: RestaurantCardProps[] = [
@@ -96,6 +95,24 @@ export const restaurants: RestaurantCardProps[] = [
     rating: 3.9,
     deliveryTime: 35,
     priceForTwo: 500
+  },
+  {
+    id: "9",
+    name: "Sushi World",
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80",
+    cuisines: ["Sushi", "Japanese"],
+    rating: 4.6,
+    deliveryTime: 40,
+    priceForTwo: 700
+  },
+  {
+    id: "10",
+    name: "Taco Fiesta",
+    image: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80",
+    cuisines: ["Tacos", "Mexican"],
+    rating: 4.3,
+    deliveryTime: 30,
+    priceForTwo: 350
   }
 ];
 

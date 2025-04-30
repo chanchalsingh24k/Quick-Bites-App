@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { restaurants } from '@/data/restaurantData';
 import { RestaurantCardProps } from "@/components/RestaurantCard";
+import { useCart } from "../context/CartContext";
 
 interface FoodItem {
   id: number;
@@ -374,6 +375,7 @@ const foodItems: FoodItem[] = [
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [imageError, setImageError] = useState<{ [key: number]: boolean }>({});
+  const { addToCart } = useCart();
 
   const categories = ['All', ...new Set(foodItems.map((item: FoodItem) => item.category))];
 
@@ -460,7 +462,10 @@ const Menu = () => {
                         <span className="ml-2">{restaurant?.rating}</span>
                       </div>
                     </div>
-                    <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition-colors duration-200">
+                    <button
+                      className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition-colors duration-200"
+                      onClick={() => addToCart(item)}
+                    >
                       Add to Cart
                     </button>
                   </div>

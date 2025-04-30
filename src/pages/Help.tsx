@@ -18,12 +18,12 @@ const faqSections: FAQSection[] = [
     questions: [
       {
         id: 'partner-restaurant',
-        question: 'I want to partner my restaurant with Swiggy',
-        answer: "To partner your restaurant with Swiggy, you'll need to fill out our registration form and provide necessary documentation. Our team will guide you through the process.",
+        question: 'I want to partner my restaurant with QuickBite',
+        answer: "To partner your restaurant with QuickBite, you'll need to fill out our registration form and provide necessary documentation. Our team will guide you through the process.",
       },
       {
         id: 'mandatory-docs',
-        question: 'What are the mandatory documents needed to list my restaurant on Swiggy?',
+        question: 'What are the mandatory documents needed to list my restaurant on QuickBite?',
         answer: 'The mandatory documents include: FSSAI license, GST registration, Shop & Establishment license, Pan Card, and Menu Card with prices.',
       },
       {
@@ -33,8 +33,8 @@ const faqSections: FAQSection[] = [
       },
       {
         id: 'go-live',
-        question: 'After I submit all documents, how long will it take for my restaurant to go live on Swiggy?',
-        answer: 'Once all documents are verified, it typically takes 3-5 business days for your restaurant to go live on Swiggy.',
+        question: 'After I submit all documents, how long will it take for my restaurant to go live on QuickBite?',
+        answer: 'Once all documents are verified, it typically takes 3-5 business days for your restaurant to go live on QuickBite.',
       },
       {
         id: 'onboarding-fees',
@@ -44,7 +44,7 @@ const faqSections: FAQSection[] = [
       {
         id: 'support-contact',
         question: 'Who should I contact if I need help & support in getting onboarded?',
-        answer: 'You can reach our partner support team at partner.support@swiggy.com or call our dedicated partner helpline.',
+        answer: 'You can reach our partner support team at partner.support@QuickBite.com or call our dedicated partner helpline.',
       },
     ],
   },
@@ -81,13 +81,13 @@ const faqSections: FAQSection[] = [
     ],
   },
   {
-    id: 'instamart',
-    title: 'Instamart Onboarding',
+    id: 'QuickBitemart',
+    title: 'QuickBite Onboarding',
     questions: [
       {
-        id: 'instamart-partner',
-        question: 'How can I become an Instamart partner?',
-        answer: 'To become an Instamart partner, please fill out our dedicated Instamart partnership form.',
+        id: 'QuickBite-partner',
+        question: 'How can I become an QuickBite partner?',
+        answer: 'To become an QuickBite partner, please fill out our dedicated QuickBite partnership form.',
       },
     ],
   },

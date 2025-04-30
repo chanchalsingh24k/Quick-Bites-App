@@ -1,6 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const PaymentModal = ({ open, onClose }: { open: boolean; onClose: () => void }) => {
+  if (!open) return null;
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-30">
+      <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md relative">
+        <button
+          className="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
+          onClick={onClose}
+        >
+          ×
+        </button>
+        <h2 className="text-2xl font-bold mb-4">Manage Payment Methods</h2>
+        <div className="space-y-4">
+          <div className="flex items-center justify-between p-4 border rounded">
+            <span>Visa **** 1234</span>
+            <button className="text-red-500 hover:underline text-sm">Remove</button>
+          </div>
+          <div className="flex items-center justify-between p-4 border rounded">
+            <span>Mastercard **** 5678</span>
+            <button className="text-red-500 hover:underline text-sm">Remove</button>
+          </div>
+        </div>
+        <button className="mt-6 w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">Add New Card</button>
+      </div>
+    </div>
+  );
+};
 
 const Profile = () => {
+  const [paymentOpen, setPaymentOpen] = useState(false);
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
@@ -17,6 +48,17 @@ const Profile = () => {
               </div>
             </div>
             
+            <div
+              className="cursor-pointer bg-white rounded-xl shadow p-6 flex flex-col items-start hover:shadow-md transition border"
+              onClick={() => navigate('/payment-methods')}
+            >
+              <div className="bg-orange-100 rounded-full p-3 mb-3">
+                <svg width="24" height="24" fill="none" stroke="orange" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20"/></svg>
+              </div>
+              <div className="font-bold text-lg mb-1">Easy Payment Options</div>
+              <div className="text-gray-600 text-sm">Multiple payment methods available for a hassle-free experience.</div>
+            </div>
+
             <div className="border-t pt-6">
               <h3 className="text-lg font-semibold mb-4">Personal Information</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -99,6 +141,7 @@ const Profile = () => {
             </div>
           </div>
         </div>
+        <PaymentModal open={paymentOpen} onClose={() => setPaymentOpen(false)} />
       </div>
     </div>
   );

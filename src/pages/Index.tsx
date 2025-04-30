@@ -1,4 +1,3 @@
-
 import HeroSection from '@/components/HeroSection';
 import FoodCategory from '@/components/FoodCategory';
 import RestaurantCard, { RestaurantCardProps } from '@/components/RestaurantCard';
